@@ -1,8 +1,11 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,8 +25,8 @@ body {
 
 .nav-menu {
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
   list-style: none;
   max-width: 1200px;
   margin: 0 auto;
@@ -35,19 +38,17 @@ body {
   font-weight: 500;
   padding: 8px 16px;
   border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease; 
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 
 .nav-menu a:hover {
   background-color: #3b82f6;
   color: #ffffff;
 }
 
-
 .main-container {
-  flex: 1; 
-  display: flex; 
+  flex: 1;
+  display: flex;
   gap: 2rem;
   max-width: 1200px;
   width: 100%;
@@ -55,20 +56,32 @@ body {
   padding: 0 1rem;
 }
 
-.conteudo-principal {
-  flex: 3; 
+.coluna-principal {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.secao-card {
   background-color: #ffffff;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+.secao-card p {
+  line-height: 1.6;
+  color: #475569;
+}
+
 .sidebar {
-  flex: 1; 
+  flex: 1;
   background-color: #ffffff;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: fit-content;
 }
 
 h2 {
@@ -77,12 +90,11 @@ h2 {
   color: #1e293b;
 }
 
-
 .galeria-container {
   display: flex;
-  flex-wrap: wrap;          
-  justify-content: center;  
-  gap: 1.5rem; 
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .projeto-card {
@@ -91,17 +103,14 @@ h2 {
   background: linear-gradient(135deg, #4f46e5, #7c3aed);
   color: #ffffff;
   border-radius: 12px;
-  
   display: flex;
   justify-content: center;
   align-items: center;
-  
   font-weight: 600;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
-
 
 .projeto-card:hover {
   transform: translateY(-5px);
@@ -110,7 +119,7 @@ h2 {
 
 .profile-card {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 1rem;
@@ -119,14 +128,12 @@ h2 {
 .profile-avatar {
   width: 80px;
   height: 80px;
-  border-radius: 50%;    
+  border-radius: 50%;
   background-color: #3b82f6;
   color: #ffffff;
-  
- 
+  display: flex;
   justify-content: center;
   align-items: center;
-  
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -153,7 +160,6 @@ h2 {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-
 .profile-btn:hover {
   background-color: #2563eb;
   transform: scale(1.05);
@@ -171,7 +177,7 @@ h2 {
   .main-container {
     flex-direction: column;
   }
-  
+
   .nav-menu {
     flex-direction: column;
     gap: 0.5rem;
