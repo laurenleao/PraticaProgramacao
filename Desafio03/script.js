@@ -126,7 +126,8 @@ inputBusca.addEventListener('input', (event) => {
 });
 
 btnCadastrar.addEventListener('mouseover', () => {
-  btnCadastrar.title = "Clique para confirmar o cadastro do usuário!";
+  mensagemValidacao.textContent = "Preencha todos os campos antes de cadastrar!";
+  mensagemValidacao.className = "mensagem ativo menor";
 });
 
 renderizarLista();
